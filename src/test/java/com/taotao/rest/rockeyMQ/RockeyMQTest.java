@@ -23,7 +23,7 @@ public class RockeyMQTest {
 	public void testProducer() {
 		DefaultMQProducer producer = new DefaultMQProducer("Producer");  
         //nameserver服务,多个以;分开   
-        producer.setNamesrvAddr("192.168.18.149:9876");  
+        producer.setNamesrvAddr("192.168.18.149:9876;192.168.18.149:9876");  
         try{  
             producer.start();  
             for(Integer i=0;i<10000;i++){
