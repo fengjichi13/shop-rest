@@ -12,7 +12,9 @@ import com.alibaba.rocketmq.common.message.MessageExt;
 
 public class Consumer1Test {
 	public static void main(String[] args) {
-		DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("PushConsumer");    
+		DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("PushConsumer");
+		//默认为1条，DefaultMQPushConsumer设置批量拉取对应的是此参数，在先启动producer，再启动consumer时生效，但不推荐这样做
+//		consumer.setConsumeMessageBatchMaxSize(10);
         consumer.setNamesrvAddr("192.168.18.148:9876;192.168.18.149:9876");     
         try {    
             //订阅PushTopic下Tag为push的消息    

@@ -12,7 +12,7 @@ import com.alibaba.rocketmq.common.message.MessageExt;
 
 public class Consumer2Test {
 	public static void main(String[] args) {
-		DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("PushConsumer");    
+		DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("PushConsumer");
         consumer.setNamesrvAddr("192.168.18.148:9876;192.168.18.149:9876");     
         try {    
             //订阅PushTopic下Tag为push的消息    
